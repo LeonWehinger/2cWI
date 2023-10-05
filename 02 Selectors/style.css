@@ -1,0 +1,18 @@
+/* Element Selector */
+div {
+    background-color: aqua;
+}
+
+/* id selector */
+#header {
+    font-size: 2rem;
+}
+
+/* Klassenselector */
+.subtitle {
+    color: rgb(228, 40, 15);
+}
+
+#text p {
+    background-color: aquamarine;
+}
