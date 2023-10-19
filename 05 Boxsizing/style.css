@@ -1,0 +1,16 @@
+div {
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+    border-style:solid ;
+}
+
+.second {
+    padding: 20px;
+}
+.first {
+    padding: 25px;
+}
+*{
+    box-sizing: border-box;
+}
