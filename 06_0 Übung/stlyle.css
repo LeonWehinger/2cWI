@@ -1,0 +1,28 @@
+.container1 {
+    background-color: yellow;
+    display: flex;
+    height: 100px;
+    width: 1500px;
+    justify-content: end;
+    align-items: center;
+
+}
+
+.boxo {
+    background-color: green;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+.container2{
+    background-color: aqua;
+    width: 400px;
+    height: 300px;
+    margin: 20px;
+}
+
+.box1{
+    margin-top: 20px;
+    margin-left: 20px;
+}
