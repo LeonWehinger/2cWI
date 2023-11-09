@@ -1,0 +1,21 @@
+.gross {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+
+.rot {
+    position: absolute;
+    bottom: 0%;
+    width: 400px;
+    height: 100px;
+    background-color: red;
+}
+
+.gruen {
+    background-color: green;
+    
+}
