@@ -3,7 +3,7 @@
 //The result of 17.4 divided by 3.9 is 4.461538461538462 
 
 y = 17.4 / 3.9;
-console.log("The result of 17.4 divided by 3.9 is " +y)
+console.log("The result of 17.4 divided by 3.9 is " + y)
 
 //Lege eine Variable firstname und eine Varialbe lastname an. Weise den Variablen Deinen Namen zu. Gib folgendes aus: 
 
