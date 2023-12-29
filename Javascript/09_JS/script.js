@@ -27,6 +27,17 @@ for (let i = 0; i <= 100; i++) {
 
     }
 
+
 }
 
 console.log(counter);
+
+
+for (let n = 0; n <= 5; n++){
+    if (n < 5){
+        console.log("X")
+    }
+
+    else (console.log("X X X X"))
+
+}
