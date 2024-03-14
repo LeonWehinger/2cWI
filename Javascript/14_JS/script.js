@@ -46,6 +46,10 @@ else if (select == 2) {
     Kontostand = Kontostand - abheben;
     console.log("Sie haben erfolgreich abgehoben.");
   }
+  else {
+    console.log("Eingabe Ungültig");
+  }
+
   
   
   
@@ -57,7 +61,7 @@ else if (select == 4) {
   console.log("Ende");
 }
 
-
+process.exit(0);
 
 
 }
