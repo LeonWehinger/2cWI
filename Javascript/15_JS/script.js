@@ -1,3 +1,20 @@
+import { createInterface } from "readline";
+
+const readline = createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+
+const readLineAsync = () => {
+    return new Promise((resolve) => {
+        readline.question("", (userRes) => {
+            resolve(userRes);
+
+        });
+    });
+};
+
+
 let field = [
     [0, 0, 0],
     [0, 0, 0],
@@ -8,9 +25,15 @@ let field = [
 
 
 
+async function main() {
+    await printField();
+    console.log('Druckfeld abgeschlossen');
+}
+
+main();
 
 
-function printField() {
+async function printField() {
     for (let row = 0; row < field.length; row++) {
         let actualRow = field[row];
         let output = "";
@@ -25,6 +48,8 @@ function printField() {
             output += actualRow[col] + "|";
         }
         console.log(output);
+        let row = await readLineAsync();
+        let col = await readLineAsync();
     }
 }
 

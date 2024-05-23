@@ -17,8 +17,8 @@ const readLineAsync = () => {
 };
 
 let Kontostand = 0;
-let isfinished = true;
-while (isfinished) {
+let isrunning = true;
+while (isrunning) {
   console.log("Selektieren Sie die gewünschte Funktion:");
   console.log("1. Einzahlen");
   console.log("2. Abheben");
