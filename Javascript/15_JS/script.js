@@ -29,7 +29,7 @@ let field = [
 
 
 
-function printField() {
+async function printField() {
 
     for (let turn = 1; turn <= 2; turn++) {
         for (let row = 0; row < field.length; row++) {
