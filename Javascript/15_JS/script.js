@@ -34,20 +34,33 @@ async function printField() {
     while (gaming) {
         for (let turn = 1; turn <= 2; turn++) {
 
-            console.log("choose!")
-            let choice = await readLineAsync();
-            if (choice == 1 / 1) {
-                field[1][1] == turn;
+            console.log("Player " + turn + " choose row!")
+            let choice1 = await readLineAsync();
+
+            if (choice1 != "0" || "1" || "2") {
+                console.log("Error")
+                process.exit(0);
             }
+
+            console.log("Player " + turn + " choose column")
+            let choice2 = await readLineAsync();
+
+            if (choice1 != "0" || "1" || "2") {
+                console.log("Error")
+                process.exit(0);
+            }
+
+            field[choice1][choice2] = turn;
+
 
             for (let row = 0; row < field.length; row++) {
                 let actualRow = field[row];
                 let output = "";
                 for (let col = 0; col < actualRow.length; col++) {
                     let sign = " ";
-                    if (actualRow[col] == 1) {
+                    if (turn == 1) {
                         sign = "X";
-                    } else if (actualRow[col] == 2) {
+                    } else if (turn == 2) {
                         sign = "O";
                     }
 
