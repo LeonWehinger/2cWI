@@ -15,6 +15,8 @@ const readLineAsync = () => {
 };
 
 
+
+
 let field = [
     [0, 0, 0],
     [0, 0, 0],
@@ -25,15 +27,10 @@ let field = [
 
 
 
-async function main() {
-    await printField();
-    console.log('Druckfeld abgeschlossen');
-}
-
-main();
 
 
-async function printField() {
+function printField() {
+
     for (let row = 0; row < field.length; row++) {
         let actualRow = field[row];
         let output = "";
@@ -45,14 +42,10 @@ async function printField() {
                 sign = "O";
             }
 
-            output += actualRow[col] + "|";
+            output += actualRow[col] + "|"
         }
         console.log(output);
-        let row = await readLineAsync();
-        let col = await readLineAsync();
+
     }
 }
-
-console.log(printField());
-
 
