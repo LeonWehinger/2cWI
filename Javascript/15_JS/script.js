@@ -15,7 +15,7 @@ const readLineAsync = () => {
 };
 
 
-
+let choice2;
 
 let field = [
     [0, 0, 0],
@@ -37,21 +37,24 @@ async function printField() {
             console.log("Player " + turn + " choose row!")
             let choice1 = await readLineAsync();
 
-            if (choice1 != "0" || "1" || "2") {
-                console.log("Error")
+            if (choice1 != "0" && choice1 != "1" && choice1 != "2") {
+                console.log("Error");
                 process.exit(0);
             }
 
-            console.log("Player " + turn + " choose column")
-            let choice2 = await readLineAsync();
+            else {
+                console.log("Player " + turn + " choose column")
+                choice2 = await readLineAsync()
+            }
 
-            if (choice1 != "0" || "1" || "2") {
+            if (choice2 != "0" && choice2 != "1" && choice2 != "2") {
                 console.log("Error")
                 process.exit(0);
             }
+            else {
 
-            field[choice1][choice2] = turn;
-
+                field[choice1][choice2] = turn;
+            };
 
             for (let row = 0; row < field.length; row++) {
                 let actualRow = field[row];
