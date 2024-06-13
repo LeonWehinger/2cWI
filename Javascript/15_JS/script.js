@@ -16,6 +16,7 @@ const readLineAsync = () => {
 
 
 let choice2;
+let won = false;
 
 let field = [
     [0, 0, 0],
@@ -25,7 +26,21 @@ let field = [
 
 //printField();
 
+function winCondition() {
+    if (field[0][0] == field[0][1] && field[0][0] == field[0][2] && field[0][0] != "0" ||
+        field[0][3] == field[0][4] && field[0][3] == field[0][5] && field[0][3] != "0" ||
+        field[0][6] == field[0][7] && field[0][6] == field[0][8] && field[0][6] != "0" ||
+        field[0][0] == field[0][3] && field[0][0] == field[0][6] && field[0][0] != "0" ||
+        field[0][1] == field[0][4] && field[0][1] == field[0][7] && field[0][1] != "0" ||
+        field[0][2] == field[0][5] && field[0][2] == field[0][8] && field[0][2] != "0" ||
+        field[0][0] == field[0][4] && field[0][0] == field[0][8] && field[0][0] != "0" ||
+        field[0][2] == field[0][4] && field[0][2] == field[0][6] && field[0][2] != "0"
+    ) {
+        won = true;
+        console.log("lskadjfslkafdjsalfkjsdaklkfj");
+    }
 
+}
 
 
 
@@ -76,6 +91,13 @@ async function printField() {
             }
 
 
+            winCondition();
+
+            if (won == true) {
+                console.log("Player " + turn + " won!");
+                console.log("Nigeria");
+                process.exit(0);
+            };
 
 
 
